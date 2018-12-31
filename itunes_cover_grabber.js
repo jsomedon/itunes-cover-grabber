@@ -21,6 +21,9 @@
  *       |                      |
  *       ------------------------
  *                       cover!!!!!!   <------ link to the actual image, click for view or download!!!
+ *
+ * for now this script is supposed to be used as a userscript, on itunes album page only.
+ *
  */
 
 function picture() {
