@@ -1,9 +1,9 @@
 // ==UserScript==
-// @include     /^https?://itunes\.apple\.com/\w\w/album/.+/\d+/?$/
+// @include     /^https?://itunes\.apple\.com/\w\w/album/.+/.+$/
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
-// @version     0.0.2
+// @version     0.0.3
 // ==/UserScript==
 
 /**
@@ -62,7 +62,7 @@ function cover_url(source) {
 }
 
 function button_to_cover() {
-    var button_to_cover = document.createElement("a");
+    var button_to_cover = document.createElement("button");
     button_to_cover.textContent = "cover!!!!!!";
     button_to_cover.style = "position: fixed; top: 0; right: 0; z-index: 99999; background-color: darkblue; color: white";
     button_to_cover.onclick = function () {
@@ -75,3 +75,4 @@ function main() {
     document.body.appendChild(button_to_cover());
 }
 
+main();
