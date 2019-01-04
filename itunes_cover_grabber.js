@@ -3,7 +3,7 @@
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
-// @version     0.0.3
+// @version     0.0.4
 // ==/UserScript==
 
 /**
@@ -62,17 +62,21 @@ function cover_url(source) {
 }
 
 function button_to_cover() {
-    var button_to_cover = document.createElement("button");
-    button_to_cover.textContent = "cover!!!!!!";
-    button_to_cover.style = "position: fixed; top: 0; right: 0; z-index: 99999; background-color: darkblue; color: white";
-    button_to_cover.onclick = function () {
+    var button = document.createElement("button");
+    button.onclick = function () {
         window.open(cover_url(source_of_max_width(sources(picture()))));
     };
-    return button_to_cover;
+    return button;
+}
+
+function style_button(button) {
+    button.textContent = "click for cover";
+    button.style.cssText = "position: fixed; bottom: 0; left: 0; z-index: 99999; background-color: salmon; color: lightyellow; width: 100px; height: 100px; border-radius: 50px; font-size: 20px; text-align: center;";
+    return button;
 }
 
 function main() {
-    document.body.appendChild(button_to_cover());
+    document.body.appendChild(style_button(button_to_cover()));
 }
 
 main();
