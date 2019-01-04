@@ -3,6 +3,7 @@
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
+// @version     0.0.1
 // ==/UserScript==
 
 /**
@@ -79,4 +80,4 @@ function main() {
     preview_to_cover_link(cover_url(source_of_max_width(sources(picture()))));
 }
 
-main();
+setTimeout(main, 5000);
