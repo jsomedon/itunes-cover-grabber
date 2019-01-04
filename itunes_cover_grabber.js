@@ -3,7 +3,7 @@
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
-// @version     0.0.5
+// @version     0.0.6
 // ==/UserScript==
 
 /**
@@ -74,6 +74,9 @@ function style_button(button) {
     button.style.cssText = "position: fixed; margin: 3px; bottom: 0; left: 0; z-index: 99999; background-color: darkcyan; color: lightyellow; width: 100px; height: 100px; border-radius: 50px; font-size: 20px; text-align: center;";
     button.onmouseover = function () {
         this.style.background = "salmon";
+    }
+    button.onmouseout = function () {
+        this.style.background = "darkcyan";
     }
     return button;
 }
