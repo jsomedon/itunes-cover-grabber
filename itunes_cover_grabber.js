@@ -3,7 +3,7 @@
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
-// @version     0.0.6
+// @version     0.0.7
 // ==/UserScript==
 
 /**
