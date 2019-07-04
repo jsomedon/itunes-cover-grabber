@@ -9,29 +9,19 @@
 /**
  * author: jay.somedon@outlook.com
  *
- * html page for albums on itunes store are structured like this(may change in future):
+ * urls to album covers on itunes are structured like this:
  * <picture>
  *   <source media="smaller_width">
  *   <source media="smaller_width">
  *   <source media="max_width"
  *     srcset="
- *             url1 1x,
- *             url2 2x,
- *             urlmax maxx  <--- this urlmax is url to album cover with the largest resolution
+ *             url1 1x,     <--- low resolution
+ *             url2 2x,     <--- low resolution
+ *             urlmax maxx  <--- max resolution, we want this!
  *     ">
- * this code will parse that url out and add a link to the cover url in caption area
- * so you will see a link of text "cover!!!!!" under album picture, like this:
- *       ------------------------
- *       |                      |
- *       |                      |
- *       |                      |      <---- album cover picture you typically see on left on the album page
- *       |                      |
- *       |                      |
- *       ------------------------
- *                       cover!!!!!!   <------ link to the actual image, click for view or download!!!
- *
- * for now this script is supposed to be used as a userscript, on itunes album page only.
- *
+ * this script will parse that urlmax out
+ * then add a button on bottom-left of the page
+ * so when you click that button it shows you the album cover image with max resolution
  */
 
 function picture() {
