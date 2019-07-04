@@ -1,5 +1,5 @@
 // ==UserScript==
-// @include     /^https?://itunes\.apple\.com/\w\w/album/.+/.+$/
+// @include     /^https?://music\.apple\.com/\w\w/album/.+/.+$/
 // @description Add a link to url of album cover image
 // @name        itunes_cover_grabber.js
 // @run-at      document-idle
